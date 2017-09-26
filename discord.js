@@ -35,8 +35,8 @@ client.on('message', message => {
         re = parts[0] + " buy at "+ parts[6]+ " current: $" + data +" broken: "+(parts[6]<data);
         var now = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
         //var jsonDate = now.toJSON();
-        console.log("Date: ", now);
-        object = {id: parts[0], buy: parts[6], sell: parts[10], date: now};
+        console.log("Date: ", jsonDate);
+        object = {id: parts[0], buy: parts[6], sell: parts[10], date: jsonDate};
         console.log("object",object);
         Stocks.addStock(object);
         console.log(Stocks.getStocks());

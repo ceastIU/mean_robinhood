@@ -1,0 +1,32 @@
+{
+  "name": "robinhood",
+  "version": "1.0.0",
+  "description": "my robinhood app",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "discord.js": "^11.2.1",
+    "express": "^4.15.4",
+    "hbs": "^4.0.1",
+    "request": "^2.82.0",
+    "robinhood-api": "^1.2.3",
+    "robinhood": "^1.1.1",
+    "robinhood2": "^2.0.4",
+    "twilio": "^3.6.7",
+    "yargs": "^9.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceastIU/mean_robinhood.git"
+  },
+  "author": "Christopher East",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceastIU/mean_robinhood/issues"
+  },
+  "homepage": "https://github.com/ceastIU/mean_robinhood#readme"
+}

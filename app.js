@@ -3,6 +3,7 @@ var hbs = require('hbs');
 var axios = require('axios');
 
 var app = express();
+const PORT = process.env.PORT || 3001;
 
 var robin = require('./robin');
 
@@ -28,6 +29,6 @@ app.get('/stock:id', (req, res) =>{
      
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+app.listen(PORT, () => {
+    console.log(`Server is up on ${PORT}`);
 });
