@@ -1,3 +1,8 @@
 <h1>Welcome brah!</h1>
 
 <h2>{{owner}}</h2>
+
+{{#times stocks}}
+    <h3>Stock: {{this}}</h3>
+    <a href="/stock{{this}}">{{this}}</a>
+{{/times}}
