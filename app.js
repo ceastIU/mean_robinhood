@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/stock:id', (req, res) =>{
     stockId = req.params.id;
     console.log(stockId);
+    robin.sub(stockId);
     robin.get(req.params.id).then((data)=>{
         res.render('stock.hbs',{
             stock: stockId,

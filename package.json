@@ -8,16 +8,19 @@
     "discord.js": "^11.2.1",
     "express": "^4.15.4",
     "hbs": "^4.0.1",
+    "node-schedule": "^1.2.5",
     "request": "^2.82.0",
-    "robinhood-api": "^1.2.3",
     "robinhood": "^1.1.1",
+    "robinhood-api": "^1.2.3",
+    "robinhood-observer": "0.0.8",
     "robinhood2": "^2.0.4",
     "twilio": "^3.6.7",
     "yargs": "^9.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
