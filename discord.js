@@ -28,20 +28,19 @@ client.on('ready', () => {
 // Create an event listener for messages
 client.on('message', message => {
   // If the message starts with $
+  
   if (message.content[0] === '$' && !message.author.bot) {
+    
     msg = message.content;
     parts = msg.split(" ");
     Robin.get(parts[0].slice(1)).then((data)=>{
-        re = parts[0] + " buy at "+ parts[6]+ " current: $" + data +" broken: "+(parts[6]<data);
+        re = "Develop: " + parts[0] + " buy at "+ parts[6]+ " current: $" + data +" broken: "+(parts[6]<data);
         var now = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
-        //var jsonDate = now.toJSON();
-        console.log("Date: ", jsonDate);
-        object = {id: parts[0], buy: parts[6], sell: parts[10], date: jsonDate};
-        console.log("object",object);
-        Stocks.addStock(object);
-        console.log(Stocks.getStocks());
+        object = {id: parts[0].slice(1), buy: parts[6], sell: parts[10], date: now};
+        jsonStock = JSON.stringify(object);
+        Stocks.updateStocks(object);
         message.channel.send(re);
-        Twilo.send(re);
+        //Twilo.send(re);
     }).catch((data) =>{
         message.channel.send(msg);
     }); 
@@ -55,4 +54,12 @@ client.on('message', message => {
 });
 
 // Log our bot in
-client.login(token);
+var run = () =>{
+    client.login(token);
+    console.log("success");
+}
+run()
+
+module.exports = {
+    run
+}

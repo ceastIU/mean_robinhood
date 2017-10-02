@@ -8,6 +8,7 @@
     "discord.js": "^11.2.1",
     "express": "^4.15.4",
     "hbs": "^4.0.1",
+    "node-persist": "^2.1.0",
     "node-schedule": "^1.2.5",
     "request": "^2.82.0",
     "robinhood": "^1.1.1",
