@@ -1,7 +1,7 @@
 //The username and password you use to sign into the robinhood app.
 var credentials = {
-    username: 'ceast',
-    password: 'Perch-0506'
+    username: ,
+    password: 
 };
 
 var request = require('request');
